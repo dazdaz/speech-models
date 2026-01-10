@@ -174,8 +174,8 @@ For production-quality TTS with better clarity, consider these alternatives:
 
 #### Actively Maintained (2024-2025)
 
-| Model | Size | Quality | Stars | Released | Status | Link |
-|-------|------|---------|-------|----------|--------|------|
+| Model | Params | Quality | Stars | Released | Status | Link |
+|-------|--------|---------|-------|----------|--------|------|
 | **Fish Speech** | 500M | Excellent | 24.6k | 2024 | Very Active | [GitHub](https://github.com/fishaudio/fish-speech) |
 | **Chatterbox** | 350M | Excellent | 21k | May 2025 | Very Active | [GitHub](https://github.com/resemble-ai/chatterbox) |
 | **IndexTTS** | 300M | Excellent | 16.7k | 2024 | Active | [GitHub](https://github.com/index-tts/index-tts) |
@@ -188,8 +188,8 @@ For production-quality TTS with better clarity, consider these alternatives:
 
 #### Legacy (Less Active)
 
-| Model | Size | Quality | Stars | Released | Status | Link |
-|-------|------|---------|-------|----------|--------|------|
+| Model | Params | Quality | Stars | Released | Status | Link |
+|-------|--------|---------|-------|----------|--------|------|
 | **Coqui XTTS** | 467M | Very Good | 44k | 2023 | Community maintained | [GitHub](https://github.com/coqui-ai/TTS) |
 | **Bark** | 900M+ | Good | 39k | Apr 2023 | Stable, no updates | [GitHub](https://github.com/suno-ai/bark) |
 | **Piper** | 20-60M | Good | 10k | 2023 | Stable | [GitHub](https://github.com/rhasspy/piper) |
