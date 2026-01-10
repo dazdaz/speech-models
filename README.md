@@ -176,7 +176,7 @@ For production-quality TTS with better clarity, consider these alternatives:
 
 | Model | Params | Quality | Stars | Released | Status | Link |
 |-------|--------|---------|-------|----------|--------|------|
-| **Fish Speech** | 500M | Excellent | 24.6k | 2024 | Very Active | [GitHub](https://github.com/fishaudio/fish-speech) |
+| **Fish Speech** | 500M | Excellent | 24.6k | 2024 | Very Active (open source + paid API) | [GitHub](https://github.com/fishaudio/fish-speech) |
 | **Chatterbox** | 350M | Excellent | 21k | May 2025 | Very Active | [GitHub](https://github.com/resemble-ai/chatterbox) |
 | **IndexTTS** | 300M | Excellent | 16.7k | 2024 | Active | [GitHub](https://github.com/index-tts/index-tts) |
 | **F5-TTS** | 335M | Excellent | 13.9k | Oct 2024 | Active | [GitHub](https://github.com/SWivid/F5-TTS) |
