@@ -207,6 +207,27 @@ For production-quality TTS with better clarity, consider these alternatives:
 | **Amazon Polly** | Good | Active | Pay per use | [Docs](https://aws.amazon.com/polly/) |
 | **Azure TTS** | Good, 400+ voices | Active | Pay per use | [Docs](https://azure.microsoft.com/en-us/products/ai-services/text-to-speech) |
 
+### Translation Models
+
+For machine translation, consider these open-source alternatives:
+
+| Model | Params | Languages | Quality | Features | License | Link |
+|-------|--------|-----------|---------|----------|---------|------|
+| **TranslateGemma** | 4B/12B/27B | 55 | Excellent | Multimodal (text in images), based on Gemma 3 | Apache 2.0 | [Kaggle](https://www.kaggle.com/models/google/translategemma) |
+| **NLLB-200** | 600M-3.3B | 200+ | Very Good | Best for low-resource languages | CC BY-NC 4.0 | [GitHub](https://github.com/facebookresearch/fairseq/tree/nllb) |
+| **MADLAD-400** | 3B-10.7B | 419 | Good | Widest language coverage, mobile-friendly | CC BY 4.0 | [GitHub](https://github.com/google-research/google-research/tree/master/madlad_400) |
+| **SeamlessM4T v2** | 2.3B | ~100 | Excellent | Speech-to-speech, speech-to-text, text-to-text | CC BY-NC 4.0 | [GitHub](https://github.com/facebookresearch/seamless_communication) |
+
+#### TranslateGemma Details
+
+Google's new TranslateGemma (Jan 2025) is built on Gemma 3 and optimized specifically for translation:
+
+- **4B model**: Optimized for mobile/edge devices (phones, IoT)
+- **12B model**: Best efficiency/performance ratio, outperforms 27B Gemma 3 baseline
+- **27B model**: Maximum fidelity, runs on single H100 GPU or TPU
+- **Multimodal**: Can translate text embedded in images
+- **Available on**: Kaggle, Hugging Face, Vertex AI
+
 ## Device Options
 
 | Device | Description |
