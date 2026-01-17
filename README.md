@@ -213,7 +213,7 @@ For machine translation, consider these open-source alternatives:
 
 | Model | Params | Languages | Quality | Features | License | Links |
 |-------|--------|-----------|---------|----------|---------|-------|
-| **TranslateGemma** | 4B/12B/27B | 55 | Excellent | Multimodal (text in images), based on Gemma 3 | Apache 2.0 | [Blog](https://blog.google/technology/google-deepmind/translategemma-open-translation-models/) / [Kaggle](https://www.kaggle.com/models/google/translategemma) |
+| **TranslateGemma** | 4B/12B/27B | 55 | Excellent | Multimodal (text in images), based on Gemma 3 | Apache 2.0 | [HuggingFace](https://huggingface.co/collections/google/translategemma) / [Kaggle](https://www.kaggle.com/models/google/translategemma) |
 | **NLLB-200** | 600M-3.3B | 200+ | Very Good | Best for low-resource languages | CC BY-NC 4.0 | [Meta AI](https://ai.meta.com/research/no-language-left-behind/) / [GitHub](https://github.com/facebookresearch/fairseq/tree/nllb) |
 | **MADLAD-400** | 3B-10.7B | 419 | Good | Widest language coverage, mobile-friendly | CC BY 4.0 | [Paper](https://arxiv.org/abs/2309.04662) / [GitHub](https://github.com/google-research/google-research/tree/master/madlad_400) |
 | **SeamlessM4T v2** | 2.3B | ~100 | Excellent | Speech-to-speech, speech-to-text, text-to-text | CC BY-NC 4.0 | [Meta AI](https://ai.meta.com/research/seamless-communication/) / [GitHub](https://github.com/facebookresearch/seamless_communication) |
