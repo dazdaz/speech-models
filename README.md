@@ -15,6 +15,7 @@ A comparison of text-to-speech and translation models, with a [Sopro demo implem
 | **Microsoft VibeVoice** | 0.5B-7B | 2-28 GB | 4 | Excellent | Podcasts, audiobooks, multi-speaker | Aug 2025 | MIT | [GitHub](https://github.com/microsoft/VibeVoice) |
 | **Orpheus TTS** | 150M-3B | 0.6-12 GB | 12 | Very Good | Emotional speech, low latency | Mar 2025 | Apache 2.0 | [GitHub](https://github.com/canopyai/Orpheus-TTS) |
 | **Dia** | 1.6B | ~6 GB | 2 | Excellent | Dialogue, multi-speaker conversations | Apr 2025 | Apache 2.0 | [GitHub](https://github.com/nari-labs/dia) |
+| **PersonaPlex-7B** | 7.7B | ~15 GB | Persona | Excellent | Full-duplex conversation, real-time | Mar 2025 | MIT | [GitHub](https://github.com/NVIDIA/personaplex) |
 | **Sesame CSM** | 1B | ~4 GB | Clone | Excellent | Conversational, expressive speech | Feb 2025 | Apache 2.0 | [GitHub](https://github.com/SesameAILabs/csm) |
 | **Kokoro** | 82M | 350 MB | 10+ | Good | Lightweight, fast inference | Jan 2025 | Apache 2.0 | [GitHub](https://github.com/hexgrad/kokoro) |
 | **Sopro** | 169M | ~650 MB | Clone | Good | Prototyping, voice cloning | Nov 2024 | Apache 2.0 | [GitHub](https://github.com/samuel-vitorino/sopro) |
