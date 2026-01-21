@@ -1,0 +1,123 @@
+[
+  {
+    "name": "Fish Speech",
+    "params": "500M",
+    "size": "~1.7 GB",
+    "voices": "Clone",
+    "quality": "Excellent",
+    "use_case": "General TTS, voice cloning",
+    "released": "2024",
+    "license": "Apache 2.0",
+    "link": "https://github.com/fishaudio/fish-speech"
+  },
+  {
+    "name": "Chatterbox",
+    "params": "350M",
+    "size": "~1.5 GB",
+    "voices": "Clone",
+    "quality": "Excellent",
+    "use_case": "Voice cloning, emotion control",
+    "released": "May 2025",
+    "license": "MIT",
+    "link": "https://github.com/resemble-ai/chatterbox"
+  },
+  {
+    "name": "IndexTTS",
+    "params": "300M",
+    "size": "~2.5 GB",
+    "voices": "Clone",
+    "quality": "Excellent",
+    "use_case": "Voice cloning, Chinese/English",
+    "released": "2024",
+    "license": "Apache 2.0",
+    "link": "https://github.com/index-tts/index-tts"
+  },
+  {
+    "name": "F5-TTS",
+    "params": "335M",
+    "size": "1.35 GB",
+    "voices": "Clone",
+    "quality": "Excellent",
+    "use_case": "Zero-shot voice cloning",
+    "released": "Oct 2024",
+    "license": "MIT/CC-BY-NC",
+    "link": "https://github.com/SWivid/F5-TTS"
+  },
+  {
+    "name": "Microsoft VibeVoice",
+    "params": "0.5B-7B",
+    "size": "2-28 GB",
+    "voices": "4",
+    "quality": "Excellent",
+    "use_case": "Podcasts, audiobooks, multi-speaker",
+    "released": "Aug 2025",
+    "license": "MIT",
+    "link": "https://github.com/microsoft/VibeVoice"
+  },
+  {
+    "name": "Orpheus TTS",
+    "params": "150M-3B",
+    "size": "0.6-12 GB",
+    "voices": "12",
+    "quality": "Very Good",
+    "use_case": "Emotional speech, low latency",
+    "released": "Mar 2025",
+    "license": "Apache 2.0",
+    "link": "https://github.com/canopyai/Orpheus-TTS"
+  },
+  {
+    "name": "Dia",
+    "params": "1.6B",
+    "size": "~6 GB",
+    "voices": "2",
+    "quality": "Excellent",
+    "use_case": "Dialogue, multi-speaker conversations",
+    "released": "Apr 2025",
+    "license": "Apache 2.0",
+    "link": "https://github.com/nari-labs/dia"
+  },
+  {
+    "name": "PersonaPlex-7B",
+    "params": "7.7B",
+    "size": "~15 GB",
+    "voices": "Persona",
+    "quality": "Excellent",
+    "use_case": "Full-duplex conversation, real-time",
+    "released": "Mar 2025",
+    "license": "MIT",
+    "link": "https://github.com/NVIDIA/personaplex"
+  },
+  {
+    "name": "Sesame CSM",
+    "params": "1B",
+    "size": "~4 GB",
+    "voices": "Clone",
+    "quality": "Excellent",
+    "use_case": "Conversational, expressive speech",
+    "released": "Feb 2025",
+    "license": "Apache 2.0",
+    "link": "https://github.com/SesameAILabs/csm"
+  },
+  {
+    "name": "Kokoro",
+    "params": "82M",
+    "size": "350 MB",
+    "voices": "10+",
+    "quality": "Good",
+    "use_case": "Lightweight, fast inference",
+    "released": "Jan 2025",
+    "license": "Apache 2.0",
+    "link": "https://github.com/hexgrad/kokoro"
+  },
+  {
+    "name": "Sopro",
+    "params": "169M",
+    "size": "~650 MB",
+    "voices": "Clone",
+    "quality": "Good",
+    "use_case": "Prototyping, voice cloning",
+    "released": "Nov 2024",
+    "license": "Apache 2.0",
+    "link": "https://github.com/samuel-vitorino/sopro"
+  }
+]

@@ -6,6 +6,8 @@ A comparison of text-to-speech and translation models, with a [Sopro demo implem
 
 ### Actively Maintained (2024-2025)
 
+✨ [**View Interactive Comparison & Sorting**](index.html)
+
 | Model | Params | Size | Voices | Quality | Use Case | Released | License | Link |
 |-------|--------|------|--------|---------|----------|----------|---------|------|
 | **Fish Speech** | 500M | ~1.7 GB | Clone | Excellent | General TTS, voice cloning | 2024 | Apache 2.0 | [GitHub](https://github.com/fishaudio/fish-speech) |
@@ -13,10 +15,10 @@ A comparison of text-to-speech and translation models, with a [Sopro demo implem
 | **IndexTTS** | 300M | ~2.5 GB | Clone | Excellent | Voice cloning, Chinese/English | 2024 | Apache 2.0 | [GitHub](https://github.com/index-tts/index-tts) |
 | **F5-TTS** | 335M | 1.35 GB | Clone | Excellent | Zero-shot voice cloning | Oct 2024 | MIT/CC-BY-NC | [GitHub](https://github.com/SWivid/F5-TTS) |
 | **Microsoft VibeVoice** | 0.5B-7B | 2-28 GB | 4 | Excellent | Podcasts, audiobooks, multi-speaker | Aug 2025 | MIT | [GitHub](https://github.com/microsoft/VibeVoice) |
-| **Orpheus TTS** | 150M-3B | 0.6-12 GB | 12 | Very Good | Emotional speech, low latency | Mar 2025 | Apache 2.0 | [GitHub](https://github.com/canopyai/Orpheus-TTS) |
 | **Dia** | 1.6B | ~6 GB | 2 | Excellent | Dialogue, multi-speaker conversations | Apr 2025 | Apache 2.0 | [GitHub](https://github.com/nari-labs/dia) |
 | **PersonaPlex-7B** | 7.7B | ~15 GB | Persona | Excellent | Full-duplex conversation, real-time | Mar 2025 | MIT | [GitHub](https://github.com/NVIDIA/personaplex) |
 | **Sesame CSM** | 1B | ~4 GB | Clone | Excellent | Conversational, expressive speech | Feb 2025 | Apache 2.0 | [GitHub](https://github.com/SesameAILabs/csm) |
+| **Orpheus TTS** | 150M-3B | 0.6-12 GB | 12 | Very Good | Emotional speech, low latency | Mar 2025 | Apache 2.0 | [GitHub](https://github.com/canopyai/Orpheus-TTS) |
 | **Kokoro** | 82M | 350 MB | 10+ | Good | Lightweight, fast inference | Jan 2025 | Apache 2.0 | [GitHub](https://github.com/hexgrad/kokoro) |
 | **Sopro** | 169M | ~650 MB | Clone | Good | Prototyping, voice cloning | Nov 2024 | Apache 2.0 | [GitHub](https://github.com/samuel-vitorino/sopro) |
 

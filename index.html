@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Voice AI Model Comparison</title>
+    <style>
+        :root {
+            --bg-color: #0f172a;
+            --card-bg: #1e293b;
+            --text-primary: #f8fafc;
+            --text-secondary: #94a3b8;
+            --accent: #38bdf8;
+            --accent-hover: #0ea5e9;
+            --border: #334155;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-primary);
+            margin: 0;
+            padding: 2rem;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        header {
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+            background: linear-gradient(to right, #38bdf8, #818cf8);
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .controls {
+            background: var(--card-bg);
+            padding: 1.5rem;
+            border-radius: 12px;
+            border: 1px solid var(--border);
+            margin-bottom: 2rem;
+            display: flex;
+            gap: 1.5rem;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .control-group {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        label {
+            color: var(--text-secondary);
+            font-weight: 500;
+        }
+
+        select {
+            background: var(--bg-color);
+            color: var(--text-primary);
+            border: 1px solid var(--border);
+            padding: 0.5rem 1rem;
+            border-radius: 6px;
+            font-size: 1rem;
+            outline: none;
+            cursor: pointer;
+            transition: border-color 0.2s;
+        }
+
+        select:focus {
+            border-color: var(--accent);
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .card {
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 1.5rem;
+            transition: transform 0.2s, box-shadow 0.2s;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+            border-color: var(--accent);
+        }
+
+        .card-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: start;
+            margin-bottom: 1rem;
+        }
+
+        .model-name {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: var(--text-primary);
+        }
+
+        .badge {
+            font-size: 0.75rem;
+            padding: 0.25rem 0.5rem;
+            border-radius: 9999px;
+            font-weight: 600;
+        }
+
+        .badge-quality-Excellent {
+            background: rgba(16, 185, 129, 0.2);
+            color: #34d399;
+        }
+
+        .badge-quality-VeryGood {
+            background: rgba(56, 189, 248, 0.2);
+            color: #38bdf8;
+        }
+
+        .badge-quality-Good {
+            background: rgba(251, 191, 36, 0.2);
+            color: #fbbf24;
+        }
+
+        .details {
+            flex-grow: 1;
+        }
+
+        .detail-row {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 0.5rem;
+            font-size: 0.9rem;
+        }
+
+        .label {
+            color: var(--text-secondary);
+        }
+
+        .value {
+            font-weight: 500;
+        }
+
+        .use-case {
+            margin-top: 1rem;
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+            font-style: italic;
+        }
+
+        .actions {
+            margin-top: 1.5rem;
+            padding-top: 1rem;
+            border-top: 1px solid var(--border);
+        }
+
+        .btn {
+            background: var(--accent);
+            color: var(--bg-color);
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            border-radius: 6px;
+            font-weight: 600;
+            display: block;
+            text-align: center;
+            transition: background 0.2s;
+        }
+
+        .btn:hover {
+            background: var(--accent-hover);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1>Voice AI Models</h1>
+            <p>Interactive comparison of open source text-to-speech and translation models.</p>
+        </header>
+
+        <div class="controls">
+            <div class="control-group">
+                <label for="sort-by">Sort by:</label>
+                <select id="sort-by">
+                    <option value="quality">Quality</option>
+                    <option value="params">Parameters</option>
+                    <option value="size">Size</option>
+                    <option value="released">Release Date</option>
+                </select>
+            </div>
+            <div class="control-group">
+                <label for="order">Order:</label>
+                <select id="order">
+                    <option value="desc">Descending</option>
+                    <option value="asc">Ascending</option>
+                </select>
+            </div>
+        </div>
+
+        <div id="grid" class="grid">
+            <!-- Cards will be injected here -->
+        </div>
+    </div>
+
+    <script>
+        // Embedded data to ensure it works without a server (file protocol)
+        const models = [
+            {
+                "name": "Fish Speech",
+                "params": "500M",
+                "size": "~1.7 GB",
+                "voices": "Clone",
+                "quality": "Excellent",
+                "use_case": "General TTS, voice cloning",
+                "released": "2024",
+                "license": "Apache 2.0",
+                "link": "https://github.com/fishaudio/fish-speech"
+            },
+            {
+                "name": "Chatterbox",
+                "params": "350M",
+                "size": "~1.5 GB",
+                "voices": "Clone",
+                "quality": "Excellent",
+                "use_case": "Voice cloning, emotion control",
+                "released": "May 2025",
+                "license": "MIT",
+                "link": "https://github.com/resemble-ai/chatterbox"
+            },
+            {
+                "name": "IndexTTS",
+                "params": "300M",
+                "size": "~2.5 GB",
+                "voices": "Clone",
+                "quality": "Excellent",
+                "use_case": "Voice cloning, Chinese/English",
+                "released": "2024",
+                "license": "Apache 2.0",
+                "link": "https://github.com/index-tts/index-tts"
+            },
+            {
+                "name": "F5-TTS",
+                "params": "335M",
+                "size": "1.35 GB",
+                "voices": "Clone",
+                "quality": "Excellent",
+                "use_case": "Zero-shot voice cloning",
+                "released": "Oct 2024",
+                "license": "MIT/CC-BY-NC",
+                "link": "https://github.com/SWivid/F5-TTS"
+            },
+            {
+                "name": "Microsoft VibeVoice",
+                "params": "0.5B-7B",
+                "size": "2-28 GB",
+                "voices": "4",
+                "quality": "Excellent",
+                "use_case": "Podcasts, audiobooks, multi-speaker",
+                "released": "Aug 2025",
+                "license": "MIT",
+                "link": "https://github.com/microsoft/VibeVoice"
+            },
+            {
+                "name": "Orpheus TTS",
+                "params": "150M-3B",
+                "size": "0.6-12 GB",
+                "voices": "12",
+                "quality": "Very Good",
+                "use_case": "Emotional speech, low latency",
+                "released": "Mar 2025",
+                "license": "Apache 2.0",
+                "link": "https://github.com/canopyai/Orpheus-TTS"
+            },
+            {
+                "name": "Dia",
+                "params": "1.6B",
+                "size": "~6 GB",
+                "voices": "2",
+                "quality": "Excellent",
+                "use_case": "Dialogue, multi-speaker conversations",
+                "released": "Apr 2025",
+                "license": "Apache 2.0",
+                "link": "https://github.com/nari-labs/dia"
+            },
+            {
+                "name": "PersonaPlex-7B",
+                "params": "7.7B",
+                "size": "~15 GB",
+                "voices": "Persona",
+                "quality": "Excellent",
+                "use_case": "Full-duplex conversation, real-time",
+                "released": "Mar 2025",
+                "license": "MIT",
+                "link": "https://github.com/NVIDIA/personaplex"
+            },
+            {
+                "name": "Sesame CSM",
+                "params": "1B",
+                "size": "~4 GB",
+                "voices": "Clone",
+                "quality": "Excellent",
+                "use_case": "Conversational, expressive speech",
+                "released": "Feb 2025",
+                "license": "Apache 2.0",
+                "link": "https://github.com/SesameAILabs/csm"
+            },
+            {
+                "name": "Kokoro",
+                "params": "82M",
+                "size": "350 MB",
+                "voices": "10+",
+                "quality": "Good",
+                "use_case": "Lightweight, fast inference",
+                "released": "Jan 2025",
+                "license": "Apache 2.0",
+                "link": "https://github.com/hexgrad/kokoro"
+            },
+            {
+                "name": "Sopro",
+                "params": "169M",
+                "size": "~650 MB",
+                "voices": "Clone",
+                "quality": "Good",
+                "use_case": "Prototyping, voice cloning",
+                "released": "Nov 2024",
+                "license": "Apache 2.0",
+                "link": "https://github.com/samuel-vitorino/sopro"
+            }
+        ];
+
+        // Normalization helpers
+        const parseParams = (str) => {
+            const val = parseFloat(str.replace(/[^\d.]/g, ''));
+            if (str.includes('B')) return val * 1000;
+            if (str.includes('M')) return val;
+            return 0;
+        };
+
+        const parseSize = (str) => {
+            const val = parseFloat(str.replace(/[^\d.]/g, ''));
+            if (str.includes('GB')) return val * 1024;
+            if (str.includes('MB')) return val;
+            return 0;
+        };
+
+        const parseDate = (str) => {
+            // Handle "May 2025", "2024", "Oct 2024"
+            // Default 2024 to Jan 1
+            if (!str) return 0;
+            return new Date(str).getTime() || new Date(str + " 1").getTime(); // simple heuristic
+        };
+
+        const qualityScore = {
+            "Excellent": 3,
+            "Very Good": 2,
+            "Good": 1
+        };
+
+        const container = document.getElementById('grid');
+        const sortSelect = document.getElementById('sort-by');
+        const orderSelect = document.getElementById('order');
+
+        function render() {
+            const sortBy = sortSelect.value;
+            const order = orderSelect.value === 'asc' ? 1 : -1;
+
+            const sorted = [...models].sort((a, b) => {
+                let valA, valB;
+
+                if (sortBy === 'quality') {
+                    valA = qualityScore[a.quality] || 0;
+                    valB = qualityScore[b.quality] || 0;
+                } else if (sortBy === 'params') {
+                    valA = parseParams(a.params.split('-').pop()); // take max if range
+                    valB = parseParams(b.params.split('-').pop());
+                } else if (sortBy === 'size') {
+                    valA = parseSize(a.size.split('-').pop());
+                    valB = parseSize(b.size.split('-').pop());
+                } else if (sortBy === 'released') {
+                    valA = parseDate(a.released);
+                    valB = parseDate(b.released);
+                }
+
+                if (valA < valB) return -1 * order;
+                if (valA > valB) return 1 * order;
+                return 0;
+            });
+
+            container.innerHTML = sorted.map(model => `
+                <div class="card">
+                    <div class="card-header">
+                        <div class="model-name">${model.name}</div>
+                        <div class="badge badge-quality-${model.quality.replace(/\s+/g, '')}">${model.quality}</div>
+                    </div>
+                    <div class="details">
+                        <div class="detail-row">
+                            <span class="label">Params</span>
+                            <span class="value">${model.params}</span>
+                        </div>
+                        <div class="detail-row">
+                            <span class="label">Size</span>
+                            <span class="value">${model.size}</span>
+                        </div>
+                        <div class="detail-row">
+                            <span class="label">Voices</span>
+                            <span class="value">${model.voices}</span>
+                        </div>
+                        <div class="detail-row">
+                            <span class="label">Released</span>
+                            <span class="value">${model.released}</span>
+                        </div>
+                        <div class="use-case">
+                            "${model.use_case}"
+                        </div>
+                    </div>
+                    <div class="actions">
+                        <a href="${model.link}" target="_blank" class="btn">View on GitHub</a>
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        sortSelect.addEventListener('change', render);
+        orderSelect.addEventListener('change', render);
+
+        // Initial render
+        render();
+
+    </script>
+</body>
+
+</html>
