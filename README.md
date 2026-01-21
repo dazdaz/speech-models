@@ -6,7 +6,7 @@ A comparison of text-to-speech and translation models, with a [Sopro demo implem
 
 ### Actively Maintained (2024-2025)
 
-✨ [**View Interactive Comparison & Sorting**](index.html)
+✨ [**View Interactive Comparison & Sorting**](https://htmlpreview.github.io/?https://github.com/dazdaz/speech-models/blob/main/index.html)
 
 | Model | Params | Size | Voices | Quality | Use Case | Released | License | Link |
 |-------|--------|------|--------|---------|----------|----------|---------|------|
