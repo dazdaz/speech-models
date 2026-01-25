@@ -4,7 +4,7 @@ A comparison of text-to-speech and translation models, with a [Sopro demo implem
 
 ## Open Source Models
 
-### Actively Maintained (2024-2025)
+### Actively Maintained (2024-2026)
 
 ✨ [**View Interactive Comparison & Sorting**](https://htmlpreview.github.io/?https://github.com/dazdaz/speech-models/blob/main/index.html)
 
@@ -21,6 +21,9 @@ A comparison of text-to-speech and translation models, with a [Sopro demo implem
 | **Orpheus TTS** | 150M-3B | 0.6-12 GB | 12 + Clone | Very Good | Emotional speech, low latency | Mar 2025 | Apache 2.0 | [Listen 🎵](https://github.com/canopyai/Orpheus-TTS) | [GitHub](https://github.com/canopyai/Orpheus-TTS) |
 | **Kokoro** | 82M | 350 MB | 10+ + Clone | Good | Lightweight, fast inference | Jan 2025 | Apache 2.0 | [Listen 🎵](https://huggingface.co/spaces/amphion/Kokoro-82M) | [GitHub](https://github.com/hexgrad/kokoro) |
 | **Sopro** | 169M | ~650 MB | 0 + Clone | Good | Prototyping, voice cloning | Nov 2024 | Apache 2.0 | [Listen 🎵](https://github.com/samuel-vitorino/sopro) | [GitHub](https://github.com/samuel-vitorino/sopro) |
+| **LuxTTS** | Unknown | < 1 GB VRAM | 0 + Clone | Excellent | High-speed voice cloning, real-time | Jan 2026 | Apache 2.0 | [Listen 🎵](https://github.com/ysharma3501/LuxTTS) | [GitHub](https://github.com/ysharma3501/LuxTTS) |
+| **Qwen3-TTS** | Unknown | Unknown | Design + Clone | Excellent | Voice design, cloning, storytelling | Dec 2025 | Unknown | [Listen 🎵](https://huggingface.co/spaces/Qwen/Qwen3-TTS) | [HuggingFace](https://huggingface.co/spaces/Qwen/Qwen3-TTS) |
+| **Pocket TTS** | Unknown | Small | Unknown | Good | On-device CPU inference | Jan 2026 | MIT | [Listen 🎵](https://github.com/kyutai-labs/pocket-tts) | [GitHub](https://github.com/kyutai-labs/pocket-tts) |
 
 ### Proprietary / Cloud APIs
 
