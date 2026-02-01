@@ -23,6 +23,7 @@ A comparison of text-to-speech and translation models, with a [Sopro demo implem
 | **Sopro** | 169M | ~650 MB | 0 + Clone | Good | Prototyping, voice cloning | Nov 2024 | Apache 2.0 | [Listen 🎵](https://github.com/samuel-vitorino/sopro) | [GitHub](https://github.com/samuel-vitorino/sopro) |
 | **LuxTTS** | Unknown | < 1 GB VRAM | 0 + Clone | Excellent | High-speed voice cloning, real-time | Jan 2026 | Apache 2.0 | [Listen 🎵](https://github.com/ysharma3501/LuxTTS) | [GitHub](https://github.com/ysharma3501/LuxTTS) |
 | **Qwen3-TTS** | Unknown | Unknown | Design + Clone | Excellent | Voice design, cloning, storytelling | Dec 2025 | Unknown | [Listen 🎵](https://huggingface.co/spaces/Qwen/Qwen3-TTS) | [HuggingFace](https://huggingface.co/spaces/Qwen/Qwen3-TTS) |
+| **Fun Audio Chat** | 8B | ~32 GB | 0 + Clone | Excellent | Emotion-aware chat, voice assistants | Dec 2025 | Apache 2.0 | [Listen 🎵](https://funaudio.chat) | [GitHub](https://github.com/FunAudioLLM/FunAudioChat) |
 | **Pocket TTS** | Unknown | Small | Unknown | Good | On-device CPU inference | Jan 2026 | MIT | [Listen 🎵](https://github.com/kyutai-labs/pocket-tts) | [GitHub](https://github.com/kyutai-labs/pocket-tts) |
 
 ### Proprietary / Cloud APIs
